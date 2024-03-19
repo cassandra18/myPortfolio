@@ -14,16 +14,16 @@ const Header = () => {
     ];
 
     return (
-        <header className="">
-            <nav className="">
-                <h1>
-                    <Link to="/" className="">
-                        Cassandra <span className="">Lelei</span>
+        <header className="bg-gray-800 text-white fixed top-0 left-20 right-20 my-10 mx-auto px-6 rounded-full">
+            <nav className="px-4 py-2 max-w-7xl flex justify-between items-center">
+                <h1 className="">
+                    <Link to="/" className="text-xl font-bold">
+                        Cassandra <span className="text-orange-500 px-1">Lelei</span>
                     </Link>
                 </h1>
-
+                
                 {/* navItems for large devices */}
-                <ul className="">
+                <ul className="md:flex gap-9 text-lg hidden">
                     {navItems.map(({ path, link }) => (
                         <li key={ path }>
                             <NavLink to={ path } className={({ isActive }) =>

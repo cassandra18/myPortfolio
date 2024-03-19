@@ -9,3 +9,16 @@ html, body {
   background-color: #051120;
   font-family: 'Nunito', sans-serif; 
 }
+
+.active {
+  @apply text-orange-500 underline underline-offset-4;
+}
+
+button {
+  background: #05FFC9 ;
+  color: #051120;
+}
+
+.green-color {
+  color: #05FFC9;
+}
