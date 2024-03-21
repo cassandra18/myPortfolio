@@ -10,11 +10,11 @@ export default function HeroSection() {
       <div className="flex justify-between items-center">
         <div className="text-white md:w-1/2 leading-relaxed">
           <h1 className="text-4xl">Hello,</h1>
-          <h1 className="text-4xl py-1">
+          <h1 className="text-4xl py-1" id="home">
             I'm <span className="text-orange-500">Cassandra...</span>
           </h1>
 
-          <p className="py-4">
+          <p id="home" className="py-4">
             I'm a passionate full-stack web developer with a strong foundation
             in software engineering. Armed with a certificate in software
             engineering, I've spent the past year and a half immersed in the
@@ -68,7 +68,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col md:flex-row items-center mt-4">
         <a href="" target="_blank" rel="noopener noreferrer">
-        <button className="p-2 px-4 rounded-full mr-4">Download CV</button>
+        <button className="p-2 px-4 rounded-full mr-4">Hire Me  </button>
       
           </a>
       <a className="green-color" 
