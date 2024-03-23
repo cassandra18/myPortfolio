@@ -24,13 +24,21 @@ export default function Services() {
         },
         {
             title: 'Software Development',
-            description: 'Description of Service 2',
-            icon: 'code', // Example of using a Font Awesome icon name
+            description: `As a skilled software developer, I offer custom solutions to meet your digital needs.
+
+            With proficiency in multiple programming languages and a focus on efficiency and scalability, I develop robust software applications that streamline processes and drive growth.
+            
+             Whether you require a desktop software, or complex backend system, I am committed to delivering high-quality solutions that empower your business to succeed in today's digital age.`,
+            icon: '', // Example of using a Font Awesome icon name
         },
         {
             title: 'UI/UX Design',
-            description: 'Description of Service 3',
-            icon: 'rocket', // Example of using a Font Awesome icon name
+            description: `I create seamless digital experiences that prioritize user satisfaction and engagement. I craft intuitive and visually appealing interfaces that delight users at every interaction. 
+
+            From wireframing to prototyping, I leverage my creativity and technical skills to ensure every detail enhances the overall user experience. 
+            
+            Let's collaborate to transform your ideas into intuitive, user-centric designs that elevate your digital presence.`,
+            icon: '', // Example of using a Font Awesome icon name
         },
     ];
 
