@@ -33,6 +33,16 @@ export default function Footer() {
           </div>
 
       </div>
+
+      <div>
+        <h2>Opening hours:</h2>
+        <h2>9:00 am - 5:00 pm</h2>
+      </div>
+
+      <div>
+        <p>Copyright Cassandra Lelei 2024</p>
+        <p>All rights reserved</p>
+      </div>
     </div>
   )
 }
