@@ -21,3 +21,41 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+          {/* social icons */}
+          {/* <div className="flex items-center justify-between w-28 py-5">
+            
+            <a
+              href="https://twitter.com/LelCassandra"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 icon-button hover:text-orange-500"
+              style={{ backgroundColor: "transparent", color: "#05FFC9" }}
+            >
+              {" "}
+              <FaXTwitter size={24} />
+            </a>
+
+            
+            <a
+              href="https://github.com/cassandra18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3"
+              style={{ backgroundColor: "transparent", color: "#05FFC9" }}
+            >
+              <FaGithub size={24} />
+            </a>
+
+            
+            <a
+              href="https://www.linkedin.com/in/cassandra-lelei-88987a269"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4"
+              style={{ backgroundColor: "transparent", color: "#05FFC9" }}
+            >
+              <FaLinkedin size={24} />
+            </a>
+          </div> */}
