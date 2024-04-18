@@ -3,8 +3,8 @@ import img2 from "../assets/img2.jpeg";
 
 export default function About() {
   return (
-    <div className="px-16 m-auto">
-      <div className="flex justify-between gap-36 items-center">
+    <div className="px-16 m-auto mb-36 mt-12">
+      <div className="flex justify-between gap-12 items-center">
         
         <div className=" relative ">
           <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
@@ -37,9 +37,9 @@ export default function About() {
         </div>
         
        
-        <div className="text-white leading-relaxed w-3/4">
+        <div className="text-white leading-relaxed w-full">
           <div>
-            <h1 id="about" className="text-4xl">
+            <h1 id="about" className="text-4xl font-bold">
               About <span className="text-orange-500">Me</span>
             </h1>
            

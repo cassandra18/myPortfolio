@@ -30,7 +30,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col md:flex-row items-center mt-10">
             <a href="" target="_blank" rel="noopener noreferrer">
-              <button className="py-2 px-4 rounded-full mr-4">Hire Me </button>
+              <button className="py-2  px-4 rounded-full mr-4">Hire Me </button>
             </a>
             <a
               className="green-color"
