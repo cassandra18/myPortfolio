@@ -1,7 +1,7 @@
 import React from "react";
 import img1 from "../assets/img1.jpeg";
 import { Link } from "react-router-dom";
-import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
+
 
 export default function HeroSection() {
   return (

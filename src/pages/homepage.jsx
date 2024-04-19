@@ -3,6 +3,7 @@ import HeroSection from '../components/heroSection'
 import About from '../components/about'
 import Services from '../components/services'
 import Skills from '../components/skills'
+import Contact from '../components/contact'
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <About />
       <Services />
       <Skills />
+      <Contact />
     </div>
   )
 }

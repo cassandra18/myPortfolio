@@ -43,7 +43,7 @@ export default function About() {
               About <span className="text-orange-500">Me</span>
             </h1>
            
-            <p className="py-4">
+            <p className="py-4 ">
             I'm a passionate software developer with a love for life, music, and creativity. 
             I find fulfillment in both the technical aspects of coding and the artistic side of design. 
             As a web developer and UI/UX designer, I strive to craft user-friendly and visually appealing experiences. 
