@@ -5,11 +5,11 @@ import { FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <div
-      className="bottom-0, left-o, right-0 bg-black text-white"
-      style={{ opacity: "0.4" }}
+      className="bottom-0, left-0, right-0 text-white "
+      style={{ height: "150px", backgroundColor: "rgba(0, 0, 0, 0.3)", position: "relative"  }}
     >
-      <div className="flex justify-center items center">
-        <div>
+      <div className="flex  items-center justify-center">
+        <div className="px-24 pt-3" style={{ opacity: 0.6}}>
           <h2> Follow me on:</h2>
 
           <div className="flex justify-center items-center hover:text-orange-500">
@@ -42,13 +42,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="px-24" style={{ opacity: 0.6}}>
           <h2>Opening hours:</h2>
           <h2>9:00 am - 5:00 pm</h2>
         </div>
       </div>
-        <div className="bg-gray-500">
-          <p>Copyright Cassandra Lelei 2024</p>
+        <div className="bg-gray-500 text-center bottom-0 py-3 absolute left-0 right-0" style={{ opacity: "0.2"}}>
+          <p>Copyright 2024 |  Cassandra Lelei </p>
           <p>All rights reserved</p>
         </div>
      
