@@ -8,7 +8,7 @@ const validator = require('validator');
 // Create a MySQL connection pool
 const pool = mysql.createPool({
     host: process.env.HOST,
-    user: process.env.USER,
+    user: process.env.DB_USER,
     password: process.env.PASSWORD,
     database: process.env.DB,
     connectionLimit: 10,
@@ -54,7 +54,6 @@ const createContact = asyncHandler(async (req, res) => {
         return res.status(500).json({ error: "Internal server error" });
       }
     }
-
 });
 
 // Function to send email

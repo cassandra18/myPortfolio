@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config();
 const cors = require('cors');
+const mysql = require('mysql');
 const app = express();
 const createContact = require('./controllers/contactControllers');
 const errorHandler = require('./errorHandler')
@@ -15,8 +16,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //parse incoming json data
 app.use(bodyParser.json());
 
-
-// Route to handle form submission
 app.use('/submit', createContact);
 
 // Backend start link

@@ -9,26 +9,82 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
+    errors: {},
   });
 
   //Handle Input Change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailRegex.test(value);
+
+    setFormData({ ...formData, [name]: value,
+      //validation errors
+      errors: {
+        ...(formData.errors || {}),
+        [name]: name === 'email' && !isValidEmail ? 'Invalid email format' : null,
+      }
+    });
   };
 
   //Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    //send tothe database
-    console.log(formData);
 
-    //Reset form fields
+
+  // Check for validation errors before submitting
+  if (formData.errors && Object.values(formData.errors).some(error => error)) {
+    console.error('Validation errors:', formData.errors);
+    return; // Prevent form submission if errors exist
+  }
+   
+  // send to database
+    try {
+      const response = await fetch('http://localhost:5000/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error (`Error: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.log('Success: ', data);
+
+
+       // Display success message on UI (e.g., using a state variable)
     setFormData({
-      name: "",
-      email: "",
-      message: "",
+      ...formData,
+      successMessage: 'Your message has been submitted successfully!',
+      errorMessage: null,
     });
+
+   // Reset form fields after a short delay
+    setTimeout(() => {
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        successMessage: null,
+        errorMessage: null,
+        errors: null, // Reset errors as well
+      });
+    }, 2000); // Adjust delay as needed
+
+    } catch (error) {
+      console.error('Error:', error);
+
+        // Display error message on UI
+    setFormData({
+      ...formData,
+      successMessage: null,
+      errorMessage: 'An error occurred. Please try again later.',
+    });
+    }
+    
   };
 
   return (
@@ -120,6 +176,7 @@ const Contact = () => {
                    
                   }}
                 ></input>
+                
             </div>
 
             {/* Email field */}
@@ -136,6 +193,7 @@ const Contact = () => {
                    
                   }}
                 ></input>
+     
             </div>
 
             {/* Message field */}
