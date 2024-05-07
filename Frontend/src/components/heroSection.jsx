@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <div className="py-32 px-16 m-auto">
+    <div className="md:py-32 lg:py-16 px-16 m-auto">
       <div className="flex justify-between items-center">
         <div className="text-white md:w-1/2 leading-relaxed">
-          <h3 className="text-2xl">Hello,</h3>
+          <h3 className="text-4xl">Hello,</h3>
           <h2 className="text-4xl py-1" id="home">
             I'm <span className="text-orange-500">Cassandra...</span>
           </h2>

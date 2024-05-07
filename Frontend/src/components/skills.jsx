@@ -68,7 +68,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className=" px-16 m-auto">
+    <div className=" px-16 m-auto mb-28">
       <h1
         id="skills"
         className="text-white text-4xl py-8 text-center font-bold"

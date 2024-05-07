@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
@@ -55,12 +56,11 @@ const Contact = () => {
       console.log('Success: ', data);
 
 
-       // Display success message on UI (e.g., using a state variable)
-    setFormData({
-      ...formData,
-      successMessage: 'Your message has been submitted successfully!',
-      errorMessage: null,
-    });
+      toast.success("Form submitted successfully!", {
+        position: "top-right", // Adjust position as needed
+        autoClose: 2000, // Close after 5 seconds
+      });
+
 
    // Reset form fields after a short delay
     setTimeout(() => {
@@ -72,7 +72,7 @@ const Contact = () => {
         errorMessage: null,
         errors: null, // Reset errors as well
       });
-    }, 2000); // Adjust delay as needed
+    }, 2000); 
 
     } catch (error) {
       console.error('Error:', error);
@@ -89,14 +89,14 @@ const Contact = () => {
 
   return (
     <div className="px-16 m-auto mb-36 mt-12 text-white">
-      <h1 className="text-4xl font-bold my-10">
+      <h1 className="text-4xl font-bold my-12">
         Lets work <span className="text-orange-500">Together</span>
       </h1>
 
       <div className="flex justify-between gap-12 ">
-        <div className="md:w-1/2">
+        <div className="w-1/2">
           <h1
-            className="py-3"
+            className="py-3 text-2xl"
             style={{
               background: "linear-gradient(to right, #FF7307 0%, #05FFC9 30%)",
               WebkitBackgroundClip: "text",
@@ -159,11 +159,11 @@ const Contact = () => {
         </div>
 
         {/* Form field */}
-        <div >
+        <div className="w-1/2 " >
           <form onSubmit={handleSubmit}  className="flex flex-col">
             {/* Name field */}
-            <div className="mb-4">
-                <label htmlFor="name" className="block text-sm font-medium pb-2">Name</label>
+            <div className="mb-4 w-3/4"  >
+                <label htmlFor="name" className="block  font-medium pb-2">Name</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required 
                 className="w-full"
                 style={{
@@ -172,7 +172,6 @@ const Contact = () => {
                     backgroundImage: "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
                     backgroundOrigin: "border-box",
                     backgroundClip: "content-box, border-box",
-                    
                    
                   }}
                 ></input>
@@ -180,9 +179,10 @@ const Contact = () => {
             </div>
 
             {/* Email field */}
-            <div className="mb-4">
+            <div className="mb-4 w-3/4">
                 <label htmlFor="email" className="block">Email</label>
                 <input id="email" name="email" value={formData.email} onChange={handleChange} required
+                className="w-full"
                 style={{
                     borderRadius: "2px",
                     border: "double 1px transparent",
@@ -197,9 +197,10 @@ const Contact = () => {
             </div>
 
             {/* Message field */}
-            <div className="mb-4">
+            <div className="mb-4 w-3/4" >
                 <label htmlFor="message" className="block">Message</label>
                 <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows="4"
+                className="w-full"
                 style={{
                     borderRadius: "2px",
                     border: "double 1px transparent",
@@ -213,16 +214,11 @@ const Contact = () => {
             </div>
 
             {/* Submit button */}
-            <div className="mb-4 ">
-                <button type="submit" className=" text-white "
+            <div className="mb-4 w-3/4 ">
+                <button type="submit" className="rounded px-3 py-1 text-bold"
                 style={{
-                    borderRadius: "2px",
-                    border: "double 1px transparent",
-                    backgroundImage: "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                    backgroundOrigin: "border-box",
-                    backgroundClip: "content-box, border-box",
-                    
-                   
+                  background: "linear-gradient(to right, rgba(239, 109, 9, 0.8), rgba(5, 255, 201, 0.8))",
+                  fontSize: "16px"
                   }}
                   >Submit</button>
             </div>

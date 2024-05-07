@@ -58,8 +58,8 @@ export default function Services() {
 
   return (
     <>
-      <div className="px-16 m-auto mb-36">
-        <h1 id="services" className="text-white text-4xl py-8 text-center font-bold">
+      <div className="px-16 m-auto mb-28">
+        <h1 id="services" className="text-white text-4xl my-16 text-center font-bold">
           My <span className="text-orange-500">Services</span>
         </h1>
         <section className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mx-3 ">
