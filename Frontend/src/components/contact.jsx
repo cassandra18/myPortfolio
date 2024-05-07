@@ -20,12 +20,15 @@ const Contact = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isValidEmail = emailRegex.test(value);
 
-    setFormData({ ...formData, [name]: value,
+    setFormData({
+      ...formData,
+      [name]: value,
       //validation errors
       errors: {
         ...(formData.errors || {}),
-        [name]: name === 'email' && !isValidEmail ? 'Invalid email format' : null,
-      }
+        [name]:
+          name === "email" && !isValidEmail ? "Invalid email format" : null,
+      },
     });
   };
 
@@ -33,58 +36,56 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Check for validation errors before submitting
+    if (
+      formData.errors &&
+      Object.values(formData.errors).some((error) => error)
+    ) {
+      console.error("Validation errors:", formData.errors);
+      return; // Prevent form submission if errors exist
+    }
 
-  // Check for validation errors before submitting
-  if (formData.errors && Object.values(formData.errors).some(error => error)) {
-    console.error('Validation errors:', formData.errors);
-    return; // Prevent form submission if errors exist
-  }
-   
-  // send to database
+    // send to database
     try {
-      const response = await fetch('http://localhost:5000/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+      const response = await fetch("http://localhost:5000/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
-        throw new Error (`Error: ${response.statusText}`);
+        throw new Error(`Error: ${response.statusText}`);
       }
 
       const data = await response.json();
-      console.log('Success: ', data);
-
+      console.log("Success: ", data);
 
       toast.success("Form submitted successfully!", {
         position: "top-right", // Adjust position as needed
         autoClose: 2000, // Close after 5 seconds
       });
 
-
-   // Reset form fields after a short delay
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-        successMessage: null,
-        errorMessage: null,
-        errors: null, // Reset errors as well
-      });
-    }, 2000); 
-
+      // Reset form fields after a short delay
+      setTimeout(() => {
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+          successMessage: null,
+          errorMessage: null,
+          errors: null, // Reset errors as well
+        });
+      }, 2000);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
 
-        // Display error message on UI
-    setFormData({
-      ...formData,
-      successMessage: null,
-      errorMessage: 'An error occurred. Please try again later.',
-    });
+      // Display error message on UI
+      setFormData({
+        ...formData,
+        successMessage: null,
+        errorMessage: "An error occurred. Please try again later.",
+      });
     }
-    
   };
 
   return (
@@ -159,68 +160,91 @@ const Contact = () => {
         </div>
 
         {/* Form field */}
-        <div className="w-1/2 " >
-          <form onSubmit={handleSubmit}  className="flex flex-col">
+        <div className="w-1/2 ">
+          <form onSubmit={handleSubmit} className="flex flex-col">
             {/* Name field */}
-            <div className="mb-4 w-3/4"  >
-                <label htmlFor="name" className="block  font-medium pb-2">Name</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required 
+            <div className="mb-4 w-3/4">
+              <label htmlFor="name" className="block  font-medium pb-2">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full"
                 style={{
-                    borderRadius: "2px",
-                    border: "double 1px transparent",
-                    backgroundImage: "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                    backgroundOrigin: "border-box",
-                    backgroundClip: "content-box, border-box",
-                   
-                  }}
-                ></input>
-                
+                  borderRadius: "2px",
+                  border: "double 1px transparent",
+                  backgroundImage:
+                    "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
+                  backgroundOrigin: "border-box",
+                  backgroundClip: "content-box, border-box",
+                }}
+              ></input>
             </div>
 
             {/* Email field */}
             <div className="mb-4 w-3/4">
-                <label htmlFor="email" className="block">Email</label>
-                <input id="email" name="email" value={formData.email} onChange={handleChange} required
+              <label htmlFor="email" className="block">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full"
                 style={{
-                    borderRadius: "2px",
-                    border: "double 1px transparent",
-                    backgroundImage: "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                    backgroundOrigin: "border-box",
-                    backgroundClip: "content-box, border-box",
-                    
-                   
-                  }}
-                ></input>
-     
+                  borderRadius: "2px",
+                  border: "double 1px transparent",
+                  backgroundImage:
+                    "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
+                  backgroundOrigin: "border-box",
+                  backgroundClip: "content-box, border-box",
+                }}
+              ></input>
             </div>
 
             {/* Message field */}
-            <div className="mb-4 w-3/4" >
-                <label htmlFor="message" className="block">Message</label>
-                <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows="4"
+            <div className="mb-4 w-3/4">
+              <label htmlFor="message" className="block">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows="4"
                 className="w-full"
                 style={{
-                    borderRadius: "2px",
-                    border: "double 1px transparent",
-                    backgroundImage: "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                    backgroundOrigin: "border-box",
-                    backgroundClip: "content-box, border-box",
-                    
-                   
-                  }}
-                ></textarea>
+                  borderRadius: "2px",
+                  border: "double 1px transparent",
+                  backgroundImage:
+                    "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
+                  backgroundOrigin: "border-box",
+                  backgroundClip: "content-box, border-box",
+                }}
+              ></textarea>
             </div>
 
             {/* Submit button */}
             <div className="mb-4 w-3/4 ">
-                <button type="submit" className="rounded px-3 py-1 text-bold"
+              <button
+                type="submit"
+                className="rounded px-3 py-1 "
                 style={{
-                  background: "linear-gradient(to right, rgba(239, 109, 9, 0.8), rgba(5, 255, 201, 0.8))",
-                  fontSize: "16px"
-                  }}
-                  >Submit</button>
+                  background: "rgb(5, 255, 201)",
+                  fontSize: "16px",
+                }}
+              >
+                Submit
+              </button>
             </div>
           </form>
         </div>

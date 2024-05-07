@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <div className="md:py-32 lg:py-16 px-16 m-auto">
+    <div id="hero-section" className="md:py-32 lg:py-16 px-16 m-auto">
       <div className="flex justify-between items-center">
         <div className="text-white md:w-1/2 leading-relaxed">
           <h3 className="text-4xl">Hello,</h3>

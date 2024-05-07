@@ -47,11 +47,10 @@ export default function Footer() {
           <h2>9:00 am - 5:00 pm</h2>
         </div>
       </div>
-        <div className="b text-center bottom-0 py-3 absolute left-0 right-0" style={{ opacity: 1}}>
+        <div className="text-center bottom-0 py-3 absolute left-0 right-0" style={{ opacity: 1}}>
           <p>Copyright 2024 |  Cassandra Lelei </p>
           <p>All rights reserved</p>
         </div>
-     
     </div>
   );
 }
