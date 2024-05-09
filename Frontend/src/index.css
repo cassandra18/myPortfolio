@@ -38,3 +38,15 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.typed-text {
+  width: 50%; /* Initial width */
+  background-color: orange;
+  overflow: hidden; /* Clip overflowing content */
+  animation: typing 1.5s steps(forwards, 40) ease-in-out;
+}
+
+@keyframes typing {
+  from { background-size: 0% 100%; }
+  to { background-size: 100% 100%; }
+}

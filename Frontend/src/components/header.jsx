@@ -80,9 +80,9 @@ const Header = () => {
 
       {/* Menu for small screens */}
 
-      <div className={`md:hidden, rounded-full ${isMenuOpen ? "" : "hidden"}`}>
+      <div className={`md:hidden, ${isMenuOpen ? "" : "hidden"}`}>
         <ul
-          className="text-lg text-white space-y-4 px-4 py-6"
+          className="text-lg text-white rounded-2xl space-y-4 px-4 py-6"
           style={{
             backdropFilter: "blur(10px)",
             background: "rgba(1, 1, 1, 0.3)",

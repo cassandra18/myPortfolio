@@ -89,7 +89,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-16 m-auto mb-36 mt-12 text-white">
+    <div id="contact" className="px-16 m-auto mb-36 mt-12 text-white">
       <h1 className="text-4xl font-bold my-12">
         Lets work <span className="text-orange-500">Together</span>
       </h1>
