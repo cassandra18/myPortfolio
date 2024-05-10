@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowCircleUp } from "react-icons/fa";
+import { FaArrowCircleUp, FaLeaf } from "react-icons/fa";
 
 const BackToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 200) {
-        setIsVisible(true);
+      if (div.scrollTop > 50) { 
+        
+        setIsVisible(false);
       } else {
         setIsVisible(false);
       }
-      console.log("toggling");
+     
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -19,25 +20,26 @@ const BackToTop = () => {
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };
-  }, []);
+  }, []); 
 
   const scrollToTop = () => {
-    const heroSection = document.getElementById("hero-section");
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: "smooth" });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
-
+  console.log(document.documentElement.scrollTop) 
   return (
     <div>
       {isVisible && (
         <div
-          className="fixed bottom-4 right-4 cursor-pointer text-white"
+          className="fixed bottom-4 right-4 cursor-pointer green-color z-10"
           onClick={scrollToTop}
         >
           <FaArrowCircleUp size={32} />
         </div>
       )}
+      
     </div>
   );
 };

@@ -68,14 +68,14 @@ const Skills = () => {
   ];
 
   return (
-    <div className=" px-16 m-auto mb-28">
+    <div className="md:px-16 px-8 m-auto mb-28">
       <h1
         id="skills"
-        className="text-white text-4xl py-8 text-center font-bold"
+        className="text-white text-4xl  text-center font-bold"
       >
         My <span className="text-orange-500">Skills</span>
       </h1>
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 my-12">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 my-12">
         <Card title="Front-end Skills" skills={frontEndSkills} />
         <Card title="Backend Skills" skills={backendSkills} />
         <Card title="UI/UX Design Skills" skills={uiUxDesignSkills} />

@@ -8,8 +8,8 @@ export default function Footer() {
       className="bottom-0, left-0, right-0 text-white "
       style={{ height: "150px", backgroundColor: "gray", opacity:0.3, position: "relative"  }}
     >
-      <div className="flex  items-center justify-center">
-        <div className="px-24 pt-3" style={{ opacity: 1}}>
+      <div className="flex pt-3 items-center justify-center gap-14">
+        <div className="md:px-24" style={{ opacity: 1}}>
           <h2> Follow me on:</h2>
 
           <div className="flex justify-center items-center hover:text-orange-500">
@@ -42,9 +42,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="px-24" style={{ opacity: 1}}>
+        <div className="md:px-24 " style={{ opacity: 1}}>
           <h2>Opening hours:</h2>
-          <h2>9:00 am - 5:00 pm</h2>
+          <h2 className="green-color">9:00 am - 5:00 pm</h2>
         </div>
       </div>
         <div className="text-center bottom-0 py-3 absolute left-0 right-0" style={{ opacity: 1}}>

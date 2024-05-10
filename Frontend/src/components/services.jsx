@@ -34,7 +34,7 @@ export default function Services() {
       title: "Web Design",
       description:
         "As a creative web designer, I provide tailored solutions to elevate your online presence. With an artistic flair and expertise in user experience design, I craft visually captivating websites that engage and inspire.From sleek portfolios to interactive e-commerce platforms, each project is meticulously designed to reflect your brand identity and captivate your audience. Let's collaborate to turn your vision into a stunning reality in the digital landscape.",
-      icon: SiPeakdesign,
+      icon: FaLaptopCode,
     },
     {
       title: "Software Development",
@@ -52,17 +52,17 @@ export default function Services() {
             From wireframing to prototyping, I leverage my creativity and technical skills to ensure every detail enhances the overall user experience. 
             
             Let's collaborate to transform your ideas into intuitive, user-centric designs that elevate your digital presence.`,
-      icon: FaLaptopCode,
+      icon: SiPeakdesign  ,
     },
   ];
 
   return (
     <>
-      <div className="px-16 m-auto mb-28">
+      <div className="md:px-16 px-8 m-auto mb-28">
         <h1 id="services" className="text-white text-4xl my-16 text-center font-bold">
           My <span className="text-orange-500">Services</span>
         </h1>
-        <section className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 mx-3 ">
+        <section className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8  ">
           {services.map((service, index) => (
             <Card key={index} {...service} />
           ))}

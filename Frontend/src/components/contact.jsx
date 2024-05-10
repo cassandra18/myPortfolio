@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
+import BackToTop from "./backToTop";
 
 const Contact = () => {
   //State variables to store form data
@@ -89,13 +90,16 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="px-16 m-auto mb-36 mt-12 text-white">
-      <h1 className="text-4xl font-bold my-12">
+    <>
+    <h1 className="md:text-4xl text-3xl  text text-white px-8 font-bold mt-12 mb-8">
         Lets work <span className="text-orange-500">Together</span>
       </h1>
 
-      <div className="flex justify-between gap-12 ">
-        <div className="w-1/2">
+    
+    <div id="contact" className="md:px-16 px-8  mx-auto mb-28 md:mt-12 text-white">
+      
+      <div className="flex flex-col md:flex-row justify-between  gap-12 ">
+        <div className="md:w-1/2 ">
           <h1
             className="py-3 text-2xl"
             style={{
@@ -108,7 +112,7 @@ const Contact = () => {
           </h1>
           <p className="py-3 leading-relaxed">
             Unlock the potential of your project with tailored expertise. Share
-            your vision by completing the form below, and let's embark on a
+            your vision by completing this form, and let's embark on a
             journey of collaborative innovation. Together, we'll craft a unique
             digital solution that resonates with your audience and achieves your
             goals. Your success is our priority—let's make it happen
@@ -160,7 +164,7 @@ const Contact = () => {
         </div>
 
         {/* Form field */}
-        <div className="w-1/2 ">
+        <div className="md:w-1/2 ">
           <form onSubmit={handleSubmit} className="flex flex-col">
             {/* Name field */}
             <div className="mb-4 w-3/4">
@@ -249,7 +253,9 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <BackToTop/>
     </div>
+    </>
   );
 };
 

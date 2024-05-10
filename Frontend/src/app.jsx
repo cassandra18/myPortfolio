@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import Header from "./components/header";
 import Footer from "./components/footer";
 import 'react-toastify/dist/ReactToastify.css';
-import BackToTop from "./components/backToTop";
+
 
 const App = () => {
     return (
@@ -12,7 +12,7 @@ const App = () => {
             <Header />
             <Outlet />
             <ToastContainer />
-            <BackToTop/>
+            
             <Footer />
         </div>
     )
