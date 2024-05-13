@@ -91,7 +91,7 @@ const Contact = () => {
 
   return (
     <>
-    <h1 className="md:text-4xl text-3xl  text text-white px-8 font-bold mt-12 mb-8">
+    <h1 className="md:text-4xl md:px-16  text-3xl text-white px-8 font-bold mt-12 mb-8">
         Lets work <span className="text-orange-500">Together</span>
       </h1>
 

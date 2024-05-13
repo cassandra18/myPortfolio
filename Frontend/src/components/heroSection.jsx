@@ -7,17 +7,13 @@ import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(TextPlugin);
 
 export default function HeroSection() {
-  // useEffect(() => {
-  //   console.log("Animating text...");
-  //   gsap.from(".typed-text", {
-  //     duration: 5.5,
-  //     text: {
-  //       value: "Software Developer",
-  //       delimiter: ""
-  //     },
-  //     ease: "power1.inOut"
-  //   });
-  // }, []);
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div
@@ -38,9 +34,9 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-row justify-center md:justify-start items-center mt-7 py-2 md:bg-transparent">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="#contact" onClick={(e) => { scrollToSection(e, '#contact')}}>
             <button className="py-1 md:py-2  px-4 rounded-full mr-4">
-              Hire Me{" "}
+              Hire Me
             </button>
           </a>
           <a

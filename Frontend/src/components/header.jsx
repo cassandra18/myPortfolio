@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { FaXmark } from "react-icons/fa6";
 
@@ -18,7 +17,6 @@ const Header = () => {
     { path: "#about", link: "About" },
     { path: "#services", link: "Services" },
     { path: "#skills", link: "Skills" },
-    { path: "#experience", link: "Experience" },
     { path: "#contact", link: "Contact" },
   ];
 
@@ -66,7 +64,7 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* MObile menu button, visible only on mobile screens */}
+        {/* Mobile menu button, visible only on mobile screens */}
         
           <button
             className="md:hidden green-color font-bold text-2xl bg-transparent"

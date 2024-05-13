@@ -21,7 +21,7 @@ const Card = ({ title, description, icon:Icon }) => {
         <span className="text-white">{title.split(' ')[0]}</span>{' '}
         <span className="text-orange-500">{title.split(' ').slice(1).join(' ')}</span>
         </h1>
-      <p className="text-white px-3 py-2 leading-relaxed ">{description}</p>
+      <p className="text-white px-3 pb-3 leading-relaxed ">{description}</p>
     </div>
   );
 };
