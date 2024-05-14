@@ -48,7 +48,7 @@ export default function About() {
           <div>
            
             <p className="py-4 ">
-            As a web developer, software developer and UI/UX designer, I strive to craft user-friendly and visually appealing experiences. 
+            As a web developer, software developer and UI/UX designer, I strive to craft user-friendly and visually appealing applications. 
             <br></br>
             Currently, I'm expanding my skillset by venturing into the world of mobile app creation, eager to bring user-centered design to the palm of people's hands.
             <br></br>

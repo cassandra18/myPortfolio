@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaXTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
-import BackToTop from "./backToTop";
+
 
 const Contact = () => {
   //State variables to store form data
@@ -89,172 +89,177 @@ const Contact = () => {
     }
   };
 
+ 
+
   return (
     <>
-    <h1 className="md:text-4xl md:px-16  text-3xl text-white px-8 font-bold mt-12 mb-8">
+      <h1 className="md:text-4xl md:px-16  text-3xl text-white px-8 font-bold mt-12 mb-8">
         Lets work <span className="text-orange-500">Together</span>
       </h1>
 
-    
-    <div id="contact" className="md:px-16 px-8  mx-auto mb-28 md:mt-12 text-white">
-      
-      <div className="flex flex-col md:flex-row justify-between  gap-12 ">
-        <div className="md:w-1/2 ">
-          <h1
-            className="py-3 text-2xl"
-            style={{
-              background: "linear-gradient(to right, #FF7307 0%, #05FFC9 30%)",
-              WebkitBackgroundClip: "text",
-              color: "transparent",
-            }}
-          >
-            Elevate your Digital Presence
-          </h1>
-          <p className="py-3 leading-relaxed">
-            Unlock the potential of your project with tailored expertise. Share
-            your vision by completing this form, and let's embark on a
-            journey of collaborative innovation. Together, we'll craft a unique
-            digital solution that resonates with your audience and achieves your
-            goals. Your success is our priority—let's make it happen
-          </p>
-          <div className="py-10">
-            <div className="flex gap-4 pb-5">
-              <div style={{ color: "#05FFC9" }}>
-                <FaPhoneAlt />
+      <div
+        id="contact"
+        className="md:px-16 px-8  mx-auto mb-28 md:mt-12 text-white"
+      >
+        <div className="flex flex-col md:flex-row justify-between  gap-12 ">
+          <div className="md:w-1/2 ">
+            <h1
+              className="py-3 text-2xl"
+              style={{
+                background:
+                  "linear-gradient(to right, #FF7307 0%, #05FFC9 30%)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              Elevate your Digital Presence
+            </h1>
+            <p className="py-3 leading-relaxed">
+              Unlock the potential of your project with tailored expertise.
+              Share your vision by completing this form, and let's embark on a
+              journey of collaborative innovation. Together, we'll craft a
+              unique digital solution that resonates with your audience and
+              achieves your goals. Your success is our priority—let's make it
+              happen
+            </p>
+            <div className="py-10">
+              <div className="flex gap-4 pb-5">
+                <div style={{ color: "#05FFC9" }}>
+                  <FaPhoneAlt />
+                </div>
+                <p>+254-113120575</p>
               </div>
-              <p>+254-113120575</p>
+              <div className="flex gap-4">
+                <IoMdMail style={{ color: "#05FFC9" }} />
+                <p>cassandralelei013@gmail.com</p>
+              </div>
             </div>
-            <div className="flex gap-4">
-              <IoMdMail style={{ color: "#05FFC9" }} />
-              <p>cassandralelei013@gmail.com</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-7">
-            <a
-              href="https://twitter.com/LelCassandra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-button hover:text-orange-500"
-              style={{ backgroundColor: "transparent", color: "#05FFC9" }}
-            >
-              {" "}
-              <FaXTwitter size={24} />
-            </a>
-
-            <a
-              href="https://github.com/cassandra18"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3"
-              style={{ backgroundColor: "transparent", color: "#05FFC9" }}
-            >
-              <FaGithub size={24} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/cassandra-lelei-88987a269"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4"
-              style={{ backgroundColor: "transparent", color: "#05FFC9" }}
-            >
-              <FaLinkedin size={24} />
-            </a>
-          </div>
-        </div>
-
-        {/* Form field */}
-        <div className="md:w-1/2 ">
-          <form onSubmit={handleSubmit} className="flex flex-col">
-            {/* Name field */}
-            <div className="mb-4 w-3/4">
-              <label htmlFor="name" className="block  font-medium pb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full"
-                style={{
-                  borderRadius: "2px",
-                  border: "double 1px transparent",
-                  backgroundImage:
-                    "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                  backgroundOrigin: "border-box",
-                  backgroundClip: "content-box, border-box",
-                }}
-              ></input>
-            </div>
-
-            {/* Email field */}
-            <div className="mb-4 w-3/4">
-              <label htmlFor="email" className="block">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full"
-                style={{
-                  borderRadius: "2px",
-                  border: "double 1px transparent",
-                  backgroundImage:
-                    "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                  backgroundOrigin: "border-box",
-                  backgroundClip: "content-box, border-box",
-                }}
-              ></input>
-            </div>
-
-            {/* Message field */}
-            <div className="mb-4 w-3/4">
-              <label htmlFor="message" className="block">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows="4"
-                className="w-full"
-                style={{
-                  borderRadius: "2px",
-                  border: "double 1px transparent",
-                  backgroundImage:
-                    "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
-                  backgroundOrigin: "border-box",
-                  backgroundClip: "content-box, border-box",
-                }}
-              ></textarea>
-            </div>
-
-            {/* Submit button */}
-            <div className="mb-4 w-3/4 ">
-              <button
-                type="submit"
-                className="rounded px-3 py-1 "
-                style={{
-                  background: "rgb(5, 255, 201)",
-                  fontSize: "16px",
-                }}
+            <div className="flex items-center gap-7">
+              <a
+                href="https://twitter.com/LelCassandra"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="icon-button hover:text-orange-500"
+                style={{ backgroundColor: "transparent", color: "#05FFC9" }}
               >
-                Submit
-              </button>
+                {" "}
+                <FaXTwitter size={24} />
+              </a>
+
+              <a
+                href="https://github.com/cassandra18"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3"
+                style={{ backgroundColor: "transparent", color: "#05FFC9" }}
+              >
+                <FaGithub size={24} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/cassandra-lelei-88987a269"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4"
+                style={{ backgroundColor: "transparent", color: "#05FFC9" }}
+              >
+                <FaLinkedin size={24} />
+              </a>
             </div>
-          </form>
+          </div>
+
+          {/* Form field */}
+          <div className="md:w-1/2 ">
+            <form onSubmit={handleSubmit} className="flex flex-col">
+              {/* Name field */}
+              <div className="mb-4 w-3/4">
+                <label htmlFor="name" className="block  font-medium pb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full"
+                  style={{
+                    borderRadius: "2px",
+                    border: "double 1px transparent",
+                    backgroundImage:
+                      "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
+                    backgroundOrigin: "border-box",
+                    backgroundClip: "content-box, border-box",
+                  }}
+                ></input>
+              </div>
+
+              {/* Email field */}
+              <div className="mb-4 w-3/4">
+                <label htmlFor="email" className="block">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full"
+                  style={{
+                    borderRadius: "2px",
+                    border: "double 1px transparent",
+                    backgroundImage:
+                      "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
+                    backgroundOrigin: "border-box",
+                    backgroundClip: "content-box, border-box",
+                  }}
+                ></input>
+              </div>
+
+              {/* Message field */}
+              <div className="mb-4 w-3/4">
+                <label htmlFor="message" className="block">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="4"
+                  className="w-full"
+                  style={{
+                    borderRadius: "2px",
+                    border: "double 1px transparent",
+                    backgroundImage:
+                      "linear-gradient(#051120, #051120), linear-gradient(to right,  #EF6D09, #05FFC9)",
+                    backgroundOrigin: "border-box",
+                    backgroundClip: "content-box, border-box",
+                  }}
+                ></textarea>
+              </div>
+
+              {/* Submit button */}
+              <div className="mb-4 w-3/4 ">
+                <button
+                  type="submit"
+                  className="rounded px-3 py-1 "
+                  style={{
+                    background: "rgb(5, 255, 201)",
+                    fontSize: "16px",
+                  }}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-      <BackToTop/>
-    </div>
+      
     </>
   );
 };

@@ -3,6 +3,14 @@ import { FaCode, FaLaptopCode } from "react-icons/fa";
 import { SiPeakdesign } from "react-icons/si";
 
 const Card = ({ title, description, icon:Icon }) => {
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div style={{ 
         // border: "1px solid #EF6D09",
@@ -22,6 +30,11 @@ const Card = ({ title, description, icon:Icon }) => {
         <span className="text-orange-500">{title.split(' ').slice(1).join(' ')}</span>
         </h1>
       <p className="text-white px-3 pb-3 leading-relaxed ">{description}</p>
+      <a  className="flex justify-center my-6" onClick={(e) => { scrollToSection(e, '#contact')}}>
+            <button className="md:py-1  px-4 rounded-full mr-4  text-bold" style={{ boxShadow: "0 0 5px #05FFC9, 0 0 5px #05FFC9, 0 0 5px #05FFC9, 0 0 10px #05FFC9",}}>
+              Hire Me
+            </button>
+          </a>
     </div>
   );
 };
@@ -33,25 +46,21 @@ export default function Services() {
     {
       title: "Web Design",
       description:
-        "As a creative web designer, I provide tailored solutions to elevate your online presence. With an artistic flair and expertise in user experience design, I craft visually captivating websites that engage and inspire.From sleek portfolios to interactive e-commerce platforms, each project is meticulously designed to reflect your brand identity and captivate your audience. Let's collaborate to turn your vision into a stunning reality in the digital landscape.",
+        "As a creative web designer, I provide tailored solutions to elevate your online presence. \nFrom sleek portfolios to interactive e-commerce platforms, each project is meticulously designed to reflect your brand identity and captivate your audience.",
       icon: FaLaptopCode,
     },
     {
       title: "Software Development",
-      description: `As a skilled software developer, I offer custom solutions to meet your digital needs.
-
-            With proficiency in multiple programming languages and a focus on efficiency and scalability, I develop robust software applications that streamline processes and drive growth.
+      description: `With proficiency in multiple programming languages and a focus on efficiency and scalability, I develop robust software applications that streamline processes and drive growth.
             
-             Whether you require a desktop software, or complex backend system, I am committed to delivering high-quality solutions that empower your business to succeed in today's digital age.`,
+             Get quality solutions that empower your business to succeed in today's digital age.`,
       icon: FaCode,
     },
     {
       title: "UI/UX Design",
-      description: `I create seamless digital experiences that prioritize user satisfaction and engagement. I craft intuitive and visually appealing interfaces that delight users at every interaction. 
+      description: `I create seamless digital experiences that prioritize user satisfaction. I craft intuitive and visually appealing interfaces that delight users at every interaction. 
 
-            From wireframing to prototyping, I leverage my creativity and technical skills to ensure every detail enhances the overall user experience. 
-            
-            Let's collaborate to transform your ideas into intuitive, user-centric designs that elevate your digital presence.`,
+           Let's transform your ideas into intuitive, user-centric designs that elevate your digital presence.`,
       icon: SiPeakdesign  ,
     },
   ];
@@ -64,8 +73,10 @@ export default function Services() {
         </h1>
         <section className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8  ">
           {services.map((service, index) => (
-            <Card key={index} {...service} />
+            <Card key={index} {...service}
+             />
           ))}
+          
         </section>
       </div>
     </>
