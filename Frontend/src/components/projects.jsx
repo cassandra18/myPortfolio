@@ -49,7 +49,7 @@ export default function Projects() {
       </h1>
 
       <div className="w-full h-full flex items-center justify-center px-2 py-10">
-        <div className="flex items-center overflow-x-auto  gap-4 slider-images">
+        <div className="flex items-center overflow-x-auto  gap-4 md:gap-1 slider-images">
           {images.map((image, index) => (
             <div
               key={index}

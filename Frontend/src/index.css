@@ -57,7 +57,7 @@ body {
 
 .slider-img {
   flex: 0 0 auto;
-  width: 110px;
+  width: 150px;
   border-radius: 10px;
   cursor: pointer;
   position: relative;
