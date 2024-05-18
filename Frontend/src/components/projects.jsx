@@ -48,8 +48,8 @@ export default function Projects() {
         Latest <span className="text-orange-500">Project</span>
       </h1>
 
-      <div className="w-full h-full flex items-center justify-center px-2 py-10">
-        <div className="flex items-center overflow-x-auto  gap-4 md:gap-1 slider-images">
+      <div className="w-full h-full flex items-center justify-center px-6 py-10">
+        <div className="flex items-center  gap-2 md:gap-2 slider-images">
           {images.map((image, index) => (
             <div
               key={index}
@@ -57,7 +57,6 @@ export default function Projects() {
               onClick={() => handleImageClick(index)}
             >
               <img src={image.src} alt={image.title} />
-              <h1 className="image-h1">{image.title}</h1>
               <div className="details">
                 <h2>{image.title}</h2>
                 <p>{image.description}</p>
