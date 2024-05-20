@@ -7,28 +7,28 @@ export default function Projects() {
     {
       src: "images/img3.png",
       title: "SingleBlog",
-      description: "This is the view of the single blog page in medium devices",
+      description: "This is the view of the single blog page in large and medium devices",
     },
     {
       src: "images/img2.png",
       title: " Dashboard",
-      description: "This is the view of the dashboard in medium devices",
+      description: "This is the view of the dashboard",
     },
     {
       src: "/images/img1.png",
       title: " Herosection",
-      description: "This is the view of the landing page in medium devices",
+      description: "This is the view of the landing page",
     },
     {
       src: "images/img4.png",
       title: "AllBlogs",
       description:
-        "This is the view of the all-blogs page in small devices with the navbar opened",
+        "This is the view of the contact page",
     },
     {
       src: "images/img5.png",
       title: "Contact",
-      description: "This is the view of the contact page in medium devices",
+      description: "This is the view of the about page in large and medium devices",
     },
   ];
 
