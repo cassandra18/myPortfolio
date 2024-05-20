@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-html, body {
-  height: 100%; 
+html,
+body {
+  height: 100%;
   user-select: none;
   background-color: #051120;
-  font-family: 'Nunito', sans-serif; 
+  font-family:  "League Spartan", serif;
+  font-weight: 400;
   overflow-x: hidden;
- margin-left: auto;
- margin-right: auto;
- max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 h1 {
@@ -34,21 +35,21 @@ a {
 }
 
 .green-color {
-  color: #05FFC9;
+  color: #05ffc9;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   display: none;
 }
-.visied\:text-purple-700:visited{
+.visied\:text-purple-700:visited {
   color: #6b46c1;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .slider-images {
@@ -64,10 +65,9 @@ body {
   width: 40vw !important;
   height: auto !important;
   z-index: 1;
- 
 }
 
-.slider-images img{
+.slider-images img {
   position: relative;
   z-index: 0;
   border-radius: 10px;
@@ -75,7 +75,6 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 
 .slider-img {
   flex: 0 0 auto;
@@ -87,9 +86,8 @@ body {
   transition: 0.7s ease;
 }
 
-
-.slider-img:hover{
-  transform: scale(1.1); 
+.slider-img:hover {
+  transform: scale(1.1);
   z-index: 1;
 }
 
@@ -105,7 +103,7 @@ body {
 
 .slider-images .slider-img:nth-child(3) {
   height: 50vh;
-  margin:0px 5px;
+  margin: 0px 5px;
 }
 
 .details {
@@ -120,7 +118,6 @@ body {
   overflow: wrap;
   opacity: 0;
   transition: opacity 0.7s ease, max-height 0.9s ease;
- 
 }
 
 .details h2 {
@@ -129,7 +126,7 @@ body {
   font-weight: 700;
   text-align: left;
   line-height: 44px;
-  color: #EF6D09;
+  color: #ef6d09;
   text-transform: uppercase;
   transition: 0.7s ease;
   display: none;
@@ -141,7 +138,7 @@ body {
   font-weight: 700;
   text-align: left;
   line-height: 33px;
-  color: #05FFC9;
+  color: #05ffc9;
   /* text-transform: uppercase; */
   transition: 0.7s ease;
   display: none;
@@ -152,29 +149,28 @@ body {
   max-height: 400px;
 }
 
-
 .slider-img.active .details p,
 .slider-img.active .details h2 {
   display: block;
 }
 
 @media (max-width: 450px) {
-.slider-images .slider-img:first-child,
-.slider-images .slider-img:last-child {
-  height: 10vh;
-  width: 20%;
-}
+  .slider-images .slider-img:first-child,
+  .slider-images .slider-img:last-child {
+    height: 10vh;
+    width: 20%;
+  }
 
-.slider-images .slider-img:nth-child(2),
-.slider-images .slider-img:nth-child(4) {
-  height: 20vh;
-  width: 22%;
-}
+  .slider-images .slider-img:nth-child(2),
+  .slider-images .slider-img:nth-child(4) {
+    height: 20vh;
+    width: 22%;
+  }
 
-.slider-images .slider-img:nth-child(3) {
-  height: 30vh;
-  width: 30%;
-}
+  .slider-images .slider-img:nth-child(3) {
+    height: 30vh;
+    width: 30%;
+  }
 
   .slider-img.active {
     width: 80vw !important;
@@ -194,38 +190,38 @@ body {
   }
 }
 
- @media (max-width: 1000px) and (min-width:450px) { 
+@media (max-width: 1000px) and (min-width: 450px) {
   .slider-images .slider-img:first-child,
   .slider-images .slider-img:last-child {
     height: 10vh;
     width: 15%;
   }
-  
+
   .slider-images .slider-img:nth-child(2),
   .slider-images .slider-img:nth-child(4) {
     height: 20vh;
     width: 18%;
   }
-  
+
   .slider-images .slider-img:nth-child(3) {
     height: 30vh;
     width: 20%;
   }
-  
-    .slider-img.active {
-      width: 60vw !important;
-      height: auto !important;
-      padding-left: 2px;
-      padding-right: 4px;
-    }
 
-    .details h2 {
-      font-size: 15px;
-      line-height: 24px;
-    }
-
-    .details p {
-      font-size: 11px;
-      line-height: 15px;
-    }
+  .slider-img.active {
+    width: 60vw !important;
+    height: auto !important;
+    padding-left: 2px;
+    padding-right: 4px;
   }
+
+  .details h2 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .details p {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
