@@ -36,9 +36,9 @@ const Header = () => {
 
   return (
     <header
-    className="text-white fixed top-0 left-7 right-7 my-1 mx-auto px-4  z-10"
+    className="text-white fixed top-0 left-0 right-0 my-1 mx-auto px-4  z-10"
     >
-      <nav className="px-4 py-2 max-w-7xl flex justify-between items-center rounded-full" style={{ backdropFilter: "blur(10px)", background: "rgba(0, 0, 0, 0.3)" }}
+      <nav className="px-4 py-2 max-w-7xl flex justify-between items-center rounded-full mx-auto" style={{ backdropFilter: "blur(10px)", background: "rgba(0, 0, 0, 0.3)" }}
       >
         <h1 className="text-xl font-bold">
           <a href="#home" className="text-xl font-bold">

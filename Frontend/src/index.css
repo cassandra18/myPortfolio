@@ -29,6 +29,9 @@ button {
   background-color: rgb(5, 255, 201);
   color: #051120;
 }
+a {
+  font-family: "Jost", sans-serif;
+}
 
 .green-color {
   color: #05FFC9;
@@ -38,7 +41,9 @@ button {
 ::-webkit-scrollbar {
   display: none;
 }
-
+.visied\:text-purple-700:visited{
+  color: #6b46c1;
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
@@ -178,9 +183,18 @@ body {
     padding-right: 4px;
   }
 
+  .details h2 {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .details p {
+    font-size: 11px;
+    line-height: 15px;
+  }
 }
 
- @media (max-width: 1000px) { 
+ @media (max-width: 1000px) and (min-width:450px) { 
   .slider-images .slider-img:first-child,
   .slider-images .slider-img:last-child {
     height: 10vh;
@@ -199,9 +213,19 @@ body {
   }
   
     .slider-img.active {
-      width: 80vw !important;
+      width: 60vw !important;
       height: auto !important;
       padding-left: 2px;
       padding-right: 4px;
+    }
+
+    .details h2 {
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    .details p {
+      font-size: 11px;
+      line-height: 15px;
     }
   }
