@@ -1,12 +1,18 @@
-require('dotenv').config();
 const express = require('express');
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql');
-const app = express();
+const connectDB = require('./db');
 const createContact = require('./controllers/contactControllers');
 const errorHandler = require('./errorHandler')
+require('colors');
+
+//connect to database
+connectDB();
+
 const port  = process.env.PORT || 3000;
+const app = express();
 app.use(cors());
 
 //Middleware to parse url-encoded form data
@@ -27,6 +33,6 @@ app.get('/', (req, res) => {
 app.use(errorHandler);
 
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`.blue);
   });
 
