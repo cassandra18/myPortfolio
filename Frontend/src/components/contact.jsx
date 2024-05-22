@@ -48,7 +48,7 @@ const Contact = () => {
 
     // send to database
     try {
-      const response = await fetch("http://localhost:5000/submit", {
+      const response = await fetch("https://cassandra-lelei.onrender.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
