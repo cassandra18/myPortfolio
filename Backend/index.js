@@ -2,7 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mysql = require('mysql');
+// const mysql = require('mysql');
 const connectDB = require('./db');
 const createContact = require('./controllers/contactControllers');
 const errorHandler = require('./errorHandler')

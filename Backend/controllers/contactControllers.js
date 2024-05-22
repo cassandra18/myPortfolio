@@ -1,5 +1,5 @@
 const asyncHandler = require('express-async-handler');
-const mysql = require('mysql2/promise');
+// const mysql = require('mysql2/promise');
 const ContactForm = require("../contactSchema");
 // const { v4: uuidv4 } = require('uuid');
 const nodemailer = require("nodemailer");
