@@ -43,15 +43,25 @@ A modern, responsive portfolio website showcasing my projects and skills. Built 
 ### Backend
 
 backend/
+
 ├── controllers/
+
 │   └── contactControllers.js
+
 ├── db.js
+
 ├── contactSchema.js
+
 ├── errorHandler.js
+
 ├── index.js
+
 ├── package.json
+
 ├── package-lock.json
+
 ├── .env
+
 └── .gitignore
 
 ### Frontend
