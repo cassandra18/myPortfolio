@@ -67,21 +67,21 @@ backend/
 ### Frontend
 
 frontend/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── public/
-│   ├── images/
-│   └── index.html
-├── package.json
-├── package-lock.json
-├── tailwind.config.js
-├── postcss.config.cjs
-└── vite.config.js
+|-- src/
+|   |-- assets/
+|   |-- components/
+|   |-- pages/
+|   |-- App.jsx
+|   |-- index.css
+|   |-- main.jsx
+|-- public/
+|   |-- images/
+|   |-- index.html
+|-- package.json
+|-- package-lock.json
+|-- tailwind.config.js
+|-- postcss.config.cjs
+|-- vite.config.js
 
 ## Getting Started
 
