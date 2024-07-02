@@ -48,16 +48,14 @@ const Contact = () => {
 
     // send to database
     try {
-      console.log("Sending data to backend:", formData); // Log form data being sent
-
+      
       const response = await fetch("https://cassandra-lelei.onrender.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
-      console.log("Received response from backend:", response); // Log response object
-
+      
       if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
       }
