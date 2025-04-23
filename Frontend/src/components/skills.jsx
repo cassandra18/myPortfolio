@@ -18,6 +18,7 @@ const Card = ({ title, skills }) => {
         backgroundOrigin: "border-box",
         backgroundClip: "content-box, border-box",
       }}
+      className="md:text-lg"
     >
       <h1 className="text-center text-xl font-bold px-1 py-2">
       <span className="text-white">{title.split(' ')[0]}</span>{' '}

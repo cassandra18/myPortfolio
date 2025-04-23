@@ -101,7 +101,7 @@ const Contact = () => {
 
       <div
         id="contact"
-        className="md:px-16 px-8  mx-auto mb-28 md:mt-12 text-white"
+        className="md:px-16 px-8  mx-auto mb-28 md:mt-12 text-white md:text-lg"
       >
         <div className="flex flex-col md:flex-row justify-between  gap-12 ">
           <div className="md:w-1/2 ">
@@ -133,7 +133,7 @@ const Contact = () => {
               </div>
               <div className="flex gap-4">
                 <IoMdMail style={{ color: "#05FFC9" }} />
-                <a href="mailto:cassandralelei12@gmail.com">cassandralelei12@gmail.com</a>
+                <a href="mailto:leleimade@gmail.com">leleimade@gmail.com</a>
               </div>
             </div>
             <div className="flex items-center gap-7">

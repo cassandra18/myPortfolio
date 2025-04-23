@@ -67,7 +67,7 @@ export default function Services() {
 
   return (
     <>
-      <div className="md:px-16 px-8 m-auto mb-28">
+      <div className="md:px-16 px-8 m-auto mb-28 md:text-lg">
         <h1 id="services" className="text-white text-4xl my-16 text-center font-bold">
           My <span className="text-orange-500">Services</span>
         </h1>
