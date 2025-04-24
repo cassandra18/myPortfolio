@@ -116,7 +116,7 @@ const Contact = () => {
             >
               Elevate your Digital Presence
             </h1>
-            <p className="py-3 leading-relaxed">
+            <p className="py-3 leading-relaxed text-gray-400">
               Unlock the potential of your project with tailored expertise.
               Share your vision by completing this form, and let's embark on a
               journey of collaborative innovation. Together, we'll craft a

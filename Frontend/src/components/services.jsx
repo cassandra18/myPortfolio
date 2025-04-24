@@ -29,7 +29,7 @@ const Card = ({ title, description, icon:Icon }) => {
         <span className="text-white">{title.split(' ')[0]}</span>{' '}
         <span className="text-orange-500">{title.split(' ').slice(1).join(' ')}</span>
         </h1>
-      <p className="text-white px-3 pb-3 leading-relaxed ">{description}</p>
+      <p className="text-gray-400 px-3 pb-3 leading-relaxed ">{description}</p>
       <a  className="flex justify-center my-6" onClick={(e) => { scrollToSection(e, '#contact')}}>
             <button className="md:py-1  px-4 rounded-full mr-4  text-bold" style={{ boxShadow: "0 0 5px #05FFC9, 0 0 5px #05FFC9, 0 0 5px #05FFC9, 0 0 10px #05FFC9",}}>
               Hire Me

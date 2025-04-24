@@ -36,7 +36,7 @@ export default function About() {
             />
           </div>
 
-          <div className="text-white md:text-lg  leading-relaxed w-full">
+          <div className="text-gray-400 md:text-lg  leading-relaxed w-full">
             <div>
               <p className="py-4">
                 I wear many hats—web developer, software developer, UI/UX

@@ -5,10 +5,12 @@ import { FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <div
-      className="bottom-0, left-0, right-0 text-white "
-      style={{ height: "150px", backgroundColor: "gray", opacity:0.3, position: "relative"  }}
+      className="relative bottom-0, left-0, right-0 text-gray-400 "
+      style={{ height: "150px"}}
     >
-      <div className="flex pt-3 items-center justify-center gap-14">
+      {/* overlay */}
+      <div className="absolute bg-gray-800 inset-0"></div>
+      <div className="relative flex pt-3 items-center justify-center gap-14">
         <div className="md:px-24" style={{ opacity: 1}}>
           <h2> Follow me on:</h2>
 

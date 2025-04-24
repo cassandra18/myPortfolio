@@ -32,7 +32,7 @@ const Card = ({ title, skills }) => {
             <div className="mr-6 green-color">
               {skill.icon} {/* Render the skill icon */}
             </div>
-            <span className="text-white">{skill.name}</span>{" "}
+            <span className="text-gray-400">{skill.name}</span>{" "}
             {/* Render the skill name */}
           </div>
         ))}
@@ -76,7 +76,7 @@ const Skills = () => {
       >
         My <span className="text-orange-500">Skills</span>
       </h1>
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 my-12">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 my-12 ">
         <Card title="Front-end Skills" skills={frontEndSkills} />
         <Card title="Backend Skills" skills={backendSkills} />
         <Card title="UI/UX Design Skills" skills={uiUxDesignSkills} />

@@ -21,11 +21,11 @@ export default function HeroSection() {
       className="md:mt-28 mt-12  px-8 lg:py-16 md:px-16 mx-auto flex flex-col-reverse items-center md:flex-row"
     >
       <div className="text-white md:w-2/3 leading-relaxed lg:pt-10 md:pr-10">
-        <h2 className="md:text-4xl text-2xl py-1 ">
+        <h2 className="md:text-4xl text-2xl py-1 text-gray-300 ">
           Hello, I'm <span className="text-orange-500">Cassandra...</span>
         </h2>
-        <h1 className="md:text-4xl text-2xl font-bold">Software Developer</h1>
-        <p id="home" className="py-4 md:text-lg">
+        <h1 className="md:text-4xl text-2xl font-bold text-gray-300">A Software Developer</h1>
+        <p id="home" className="py-4 md:text-lg text-gray-400">
           Hey there! I’m a full-stack web developer and designer who thrives on
           turning imaginative ideas into seamless digital experiences. From
           crafting clean user interfaces to building powerful backend systems, I
