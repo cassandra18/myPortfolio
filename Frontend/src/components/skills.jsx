@@ -2,7 +2,7 @@ import React from "react";
 import { FaReact, FaHtml5, FaCss3, FaJs } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiVite } from "react-icons/si";
 import { FaNodeJs, FaPython } from "react-icons/fa"; // For backend skills
-import { SiFigma } from "react-icons/si"; // For UI/UX design skills
+import { SiFigma, SiTypescript } from "react-icons/si"; // For UI/UX design skills
 import { DiDocker, DiAws } from "react-icons/di"; // For DevOps skills
 import { FiCode } from 'react-icons/fi';
 
@@ -50,6 +50,7 @@ const Skills = () => {
     { name: "Tailwind CSS", icon: <SiTailwindcss style={{ color: "#03f8fc"}} /> },
     { name: "NextJs", icon: <SiNextdotjs style={{ color: "white"}}/> },
     { name: "Vite", icon: <SiVite  style={{ color: "#ec03fc"}}/> },
+    { name: "Typescript", icon: <SiTypescript style={{ color: "#058ee3"}}/> },
   ];
 
   const backendSkills = [
