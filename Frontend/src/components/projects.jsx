@@ -45,7 +45,8 @@ export default function Projects() {
           >
             <img
               src={project.image}
-              alt={project.title}
+              alt={project.title} 
+              loading="lazy"
               className="w-full h-56 object-cover rounded-md mb-4"
             />
             <h2

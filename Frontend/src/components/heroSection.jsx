@@ -88,6 +88,7 @@ export default function HeroSection() {
 
         <img
           src={img1}
+          loading="lazy"
           alt="Cassandra Lelei image"
           className="w-1/2 "
           style={{

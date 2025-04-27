@@ -27,6 +27,7 @@ export default function About() {
             <img
               src={img2}
               alt="Cassandra Lelei"
+              loading="lazy"
               className="relative z-10 w-full max-w-sm rounded-[20%]"
               style={{
                 height: "400px",
