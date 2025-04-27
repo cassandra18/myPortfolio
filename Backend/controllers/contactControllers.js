@@ -1,24 +1,12 @@
 const asyncHandler = require('express-async-handler');
-// const mysql = require('mysql2/promise');
 const ContactForm = require("../contactSchema");
-// const { v4: uuidv4 } = require('uuid');
 const nodemailer = require("nodemailer");
 const validator = require('validator');
 
 
-// // Create a MySQL connection pool
-// const pool = mysql.createPool({
-//     host: process.env.HOST,
-//     user: process.env.DB_USER,
-//     password: process.env.PASSWORD,
-//     database: process.env.DB,
-//     connectionLimit: 10,
-// });
-
 
 const createContact = asyncHandler(async (req, res) => {
     const { name, email, message } = req.body;
-    // const uuid = uuidv4();
 
     //Validation of required fields
     if (!name || !email || !message) {
@@ -36,25 +24,6 @@ const createContact = asyncHandler(async (req, res) => {
     }
 
     try {
-    //   const query = `INSERT INTO submissions (name, email, message, id) VALUES(?, ?, ?, ?)`;
-    //   const values = [name, email, message, uuid];
-    //   const [result] = await pool.execute(query, values);
-
-    //   if (result.affectedRows > 0) {
-    //       // Send email
-    //       await sendEmail(name, email, message);
-    //       res.status(200).json({ message: "Form submitted successfully" });
-    //   } else {
-    //       return res.status(500).json({ error: "Failed to create form" });
-    //   }
-    // } catch (error) {
-    //   if (error.code === "ER_DUP_ENTRY") {
-    //     return res.status(400).json({ error: error.sqlMessage });
-    //   } else {
-    //     console.error("Error creating form:", error);
-    //     return res.status(500).json({ error: "Internal server error" });
-    //   }
-
     const newForm  = await ContactForm.create({
       name, email, message
     });
