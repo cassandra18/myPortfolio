@@ -56,10 +56,10 @@ const sendEmail = async (name, email, message) => {
         });
 
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            from: `"Cassy's Website" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_RECEIVER,
             subject: "New Form Submission",
-            text: `Hello Ma'am,\n Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+            text: `\n Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         };
 
         await transporter.sendMail(mailOptions);
